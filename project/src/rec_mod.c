@@ -1,4 +1,4 @@
-#include <case_4.h>
+#include <rec_mod.h>
 
 
 void recursion(int number, int step) {

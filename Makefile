@@ -1,11 +1,11 @@
 TARGET = ./main.out
 HDRS_DIR = project/include
-# XXX: Don't forget backslash at the end of any line except the last one
+
 SRCS = \
-       project/src/main.c \
-       project/src/utils.c \
-	   project/src/case_3.c \
-	   project/src/case_4.c
+		project/src/main.c \
+		project/src/utils.c \
+		project/src/is_prime_mod.c \
+		project/src/rec_mod.c
 
 .PHONY: all build rebuild check test clean
 

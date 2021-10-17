@@ -16,9 +16,7 @@ size_t timer_from(int from) {
     return counter;
 }
 
-// TODO(my_name): Implement `power of` function
-
-long custom_pow(int base, int power) {
+size_t custom_pow(int base, int power) {
     size_t result = 1;
     for (int i = 0; i < power; ++i) {
         result = result * base;

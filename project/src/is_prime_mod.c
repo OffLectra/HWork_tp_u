@@ -1,7 +1,7 @@
-#include <case_3.h>
+#include <is_prime_mod.h>
 
 
-unsigned char checking(int number) {
+unsigned char is_prime(int number) {
     if (number > 1) {
         for (int i = 2; i < number; ++i) {
             if (number % i == 0) {

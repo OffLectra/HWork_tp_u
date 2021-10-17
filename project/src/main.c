@@ -1,6 +1,6 @@
 #include <utils.h>
-#include <case_3.h>
-#include <case_4.h>
+#include <is_prime_mod.h>
+#include <rec_mod.h>
 
 #define ERR_ARGS_COUNT (-1)
 #define ERR_WRONG_FLG (-2)
@@ -10,21 +10,6 @@
 #define TST_MOD_IMPL    3
 #define TST_FOO_MOD     4
 
-
-/* NOTE(stitaevskiy):
- * We use `atoi` function just for simplification and code reducing.
- * This function doesn't report conversation errors.
- * For safety program we recommend using `strtol` and its analogs.
- * (See `man atoi` and `man strtol` for more info).
- *
- * const char str_num[] = "1234";
- * char* end = NULL;
- * int val = (int) strtol(str_num, &end, 0);
- * if (end != '\0') {
- *     //ERROR
- * }
- *
- * */
 
 int main(int argc, const char** argv) {
     if (argc < 3) {
@@ -45,8 +30,7 @@ int main(int argc, const char** argv) {
             if (argc == 4) {
                 int base = atoi(data);
                 int pow =  atoi(argv[3]);
-                long res = custom_pow(base, pow);    // TODO(my_name): Implement me
-
+                long res = custom_pow(base, pow);
                 printf("%ld\n", res);
             } else {
                 return ERR_ARGS_COUNT;
@@ -55,12 +39,8 @@ int main(int argc, const char** argv) {
         }
         case TST_MOD_IMPL: {
             int num = atoi(data);
-            unsigned char check = checking(num);
+            unsigned char check = is_prime(num);
             printf("%c\n", check);
-
-            // TODO(my_name): Print to stdout `1` if `num` is prime number and `0` otherwise
-            // This function MUST be implemented in
-            // a separate C-module (not in `main` or `utils` module)
             break;
         }
         case TST_FOO_MOD: {
