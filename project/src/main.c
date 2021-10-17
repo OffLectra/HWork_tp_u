@@ -1,6 +1,6 @@
-#include "utils.h"
-#include "case_3.h"
-#include "case_4.h"
+#include <utils.h>
+#include <case_3.h>
+#include <case_4.h>
 
 #define ERR_ARGS_COUNT (-1)
 #define ERR_WRONG_FLG (-2)
@@ -27,7 +27,6 @@
  * */
 
 int main(int argc, const char** argv) {
-
     if (argc < 3) {
         return ERR_ARGS_COUNT;
     }
@@ -46,7 +45,7 @@ int main(int argc, const char** argv) {
             if (argc == 4) {
                 int base = atoi(data);
                 int pow =  atoi(argv[3]);
-                long res = custom_pow(base, pow);    // TODO: Implement me
+                long res = custom_pow(base, pow);    // TODO(my_name): Implement me
 
                 printf("%ld\n", res);
             } else {
@@ -59,16 +58,15 @@ int main(int argc, const char** argv) {
             unsigned char check = checking(num);
             printf("%c\n", check);
 
-            // TODO: Print to stdout `1` if `num` is prime number and `0` otherwise
+            // TODO(my_name): Print to stdout `1` if `num` is prime number and `0` otherwise
             // This function MUST be implemented in
             // a separate C-module (not in `main` or `utils` module)
             break;
         }
         case TST_FOO_MOD: {
                 int num = atoi(data);
-                recursion(num,0);
-                break;               
-
+                recursion(num, 0);
+                break;
         }
         default: {
             return ERR_WRONG_FLG;

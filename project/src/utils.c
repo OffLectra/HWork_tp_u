@@ -1,4 +1,4 @@
-#include "utils.h"
+#include <utils.h>
 
 
 size_t timer_from(int from) {
@@ -6,7 +6,7 @@ size_t timer_from(int from) {
 
     for (int i = from; i >= 0; --i) {
         ++counter;
-        printf("%d",i);
+        printf("%d", i);
         if (i != 0) {
             printf(" ");
         } else {
@@ -16,12 +16,11 @@ size_t timer_from(int from) {
     return counter;
 }
 
-// TODO: Implement `power of` function
+// TODO(my_name): Implement `power of` function
 
 long custom_pow(int base, int power) {
     size_t result = 1;
-    for (int i = 0; i < power; ++i)
-    {
+    for (int i = 0; i < power; ++i) {
         result = result * base;
     }
     return result;
