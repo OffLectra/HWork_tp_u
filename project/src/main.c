@@ -39,13 +39,13 @@ int main(int argc, const char** argv) {
         }
         case TST_MOD_IMPL: {
             int num = atoi(data);
-            unsigned char check = is_prime(num);
-            printf("%c\n", check);
+            size_t check = is_prime(num);
+            printf("%zu\n", check);
             break;
         }
         case TST_FOO_MOD: {
                 int num = atoi(data);
-                recursion(num, 0);
+                recursion(num, 1);
                 break;
         }
         default: {
